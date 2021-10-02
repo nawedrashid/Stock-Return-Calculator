@@ -6,9 +6,9 @@ var Output = document.querySelector("#output");
 
 CheckBtn.addEventListener("click", function CalculateProfitAndLoss(){
     Output.style.display="none";
-    var initial = InitialPrice.value;
-    var quantity = StocksQuantity.value;
-    var current = CurrentPrice.value;
+    var initial = Number(InitialPrice.value);
+    var quantity = Number(StocksQuantity.value);
+    var current = Number(CurrentPrice.value);
     if(initial>current){
         var loss = (initial - current)* quantity;
         var lossPercentage = (loss/initial)*100;
